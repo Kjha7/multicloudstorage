@@ -431,9 +431,8 @@ def upload(myfile):
 @csrf_exempt
 def uploadfile_aws(request):
     if request.method == 'POST':
-        AWS_ID = "/oZ2q2jtDTdP06Dbh3R1ek/qlsMec6hOUqwssywo"
-        AWS_KEY = "AKIAIC4MFIXGKZ32HQEA"
-        conn = S3Connection(aws_access_key_id=AWS_ID, aws_secret_access_key=AWS_KEY)
+        AWS_ID = "aws_access_key_id"
+        AWS_KEY = "aws_secret_access_key"
 
         file_path = request.data['file_location']
         # s3 = boto3.client('s3',
