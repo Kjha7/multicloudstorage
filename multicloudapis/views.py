@@ -310,10 +310,6 @@ def upload_azure_func(file, filename):
 
 
 def upload_aws_func(data, filename):
-    AWS_ID = "AKIAIC4MFIXGKZ32HQEA"
-    AWS_KEY = "/oZ2q2jtDTdP06Dbh3R1ek/qlsMec6hOUqwssywo"
-    conn = S3Connection(aws_access_key_id=AWS_ID, aws_secret_access_key=AWS_KEY)
-
     # s3 = boto3.client('s3',
     #                   aws_access_key_id=AWS_ID,
     #                   aws_secret_access_key=AWS_KEY)
@@ -448,9 +444,6 @@ def upload(myfile):
 @csrf_exempt
 def uploadfile_aws(request):
     if request.method == 'POST':
-        AWS_ID = "/oZ2q2jtDTdP06Dbh3R1ek/qlsMec6hOUqwssywo"
-        AWS_KEY = "AKIAIC4MFIXGKZ32HQEA"
-        conn = S3Connection(aws_access_key_id=AWS_ID, aws_secret_access_key=AWS_KEY)
 
         file_path = request.data['file_location']
         # s3 = boto3.client('s3',
